@@ -1,6 +1,7 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 
 export type WriteUp = CollectionEntry<"writeups"> & {
+  fileName: string;
   ctf: CollectionEntry<"ctfs">;
   category: string;
 };
@@ -22,6 +23,7 @@ export async function parseWriteUp(
 
   return {
     ...entry,
+    fileName: entry.slug.split("/").pop()!,
     ctf: ctf,
     category: category,
   };
