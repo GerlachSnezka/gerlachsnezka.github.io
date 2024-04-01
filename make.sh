@@ -6,6 +6,10 @@ git submodule update --init --recursive --remote
 ctfs=$(find writeups/ -mindepth 1 -maxdepth 1 -type d -printf '%f\n')
 
 for ctf in $ctfs; do
+    if [ $ctf == ".github" ]; then
+      continue
+    fi
+
     echo "Parsing $ctf"
 
     years=$(find writeups/utctf/ -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | grep -E '[0-9]{4}' | xargs -I {} basename {})
