@@ -8,7 +8,8 @@ export const SITE: Site = {
 
 export const HOME: Metadata = {
   TITLE: "Home",
-  DESCRIPTION: "Astro Nano is a minimal and lightweight blog and portfolio.",
+  DESCRIPTION:
+    "We're a group of CTF enthusiasts from Slovakia and Czechia who enjoy the challenge of solving security problems.",
 };
 
 export const BLOG: Metadata = {
@@ -19,12 +20,6 @@ export const BLOG: Metadata = {
 export const CTFS: Metadata = {
   TITLE: "CTFs",
   DESCRIPTION: "A collection of CTFs We have participated in.",
-};
-
-export const PROJECTS: Metadata = {
-  TITLE: "Projects",
-  DESCRIPTION:
-    "A collection of my projects, with links to repositories and demos.",
 };
 
 export const SOCIALS: Socials = [
