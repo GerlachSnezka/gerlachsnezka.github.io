@@ -12,12 +12,6 @@ export async function getStaticPaths() {
     (await getCollection("writeups")).map((writeup) => parseWriteUp(writeup)),
   );
 
-  for (const writeup of writeups) {
-    if (writeup.data.title === "Study Music") {
-      console.log(writeup);
-    }
-  }
-
   return writeups.map((writeup) => ({
     params: {
       ctf: writeup.ctf.data.title.toLowerCase(),
