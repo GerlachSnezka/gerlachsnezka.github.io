@@ -4,7 +4,7 @@ description: "I tried to make my own version of cookie clicker, without all of t
 points: 100
 solves: 474
 date: April 1 2024
-author: xHyroM
+author: Jozef Steinhübl
 ---
 
 As soon as we open the site, we notice that we have to beat a certain score, and when we click on the cookie, it increases.

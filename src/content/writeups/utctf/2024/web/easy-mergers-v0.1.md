@@ -3,7 +3,7 @@ title: "Easy Mergers v0.1"
 description: "Tired of getting your corporate mergers blocked by the FTC"
 points: 787
 solves: 143
-author: xHyrOM
+author: Jozef Steinhübl 
 ---
 
 ![easy mergers](https://raw.githubusercontent.com/GerlachSnezka/utctf/main/assets/2024-web-easymergers.png)
