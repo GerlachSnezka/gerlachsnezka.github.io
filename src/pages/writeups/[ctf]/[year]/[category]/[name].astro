@@ -35,10 +35,16 @@ const { Content } = await writeup.render();
     </div>
     <div class="space-y-1 my-10">
       <div class="animate flex items-center gap-1.5">
-        <div class="font-base text-sm">
-          <FormattedDate date={writeup.data.date} />
-        </div>
-        &bull;
+        {
+          writeup.data.date ? (
+            <>
+              <div class="font-base text-sm">
+                <FormattedDate date={writeup.data.date} />
+              </div>
+              &bull;
+            </>
+          ) : null
+        }
         <div class="font-base text-sm">
           {readingTime(writeup.body)}
         </div>

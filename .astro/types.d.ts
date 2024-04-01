@@ -219,9 +219,100 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "writeups": {
+"utctf/2024/cryptography/beginner:-anti-dcode.fr.md": {
+	id: "utctf/2024/cryptography/beginner:-anti-dcode.fr.md";
+  slug: "utctf/2024/cryptography/beginner-anti-dcodefr";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"utctf/2024/cryptography/bits-and-pieces.md": {
+	id: "utctf/2024/cryptography/bits-and-pieces.md";
+  slug: "utctf/2024/cryptography/bits-and-pieces";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"utctf/2024/cryptography/numbers-go-brrr-2.md": {
+	id: "utctf/2024/cryptography/numbers-go-brrr-2.md";
+  slug: "utctf/2024/cryptography/numbers-go-brrr-2";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"utctf/2024/cryptography/numbers-go-brrr.md": {
+	id: "utctf/2024/cryptography/numbers-go-brrr.md";
+  slug: "utctf/2024/cryptography/numbers-go-brrr";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"utctf/2024/cryptography/rsa-256.md": {
+	id: "utctf/2024/cryptography/rsa-256.md";
+  slug: "utctf/2024/cryptography/rsa-256";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"utctf/2024/forensics/contracts.md": {
+	id: "utctf/2024/forensics/contracts.md";
+  slug: "utctf/2024/forensics/contracts";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"utctf/2024/forensics/osint-1.md": {
+	id: "utctf/2024/forensics/osint-1.md";
+  slug: "utctf/2024/forensics/osint-1";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"utctf/2024/forensics/study-music.md": {
+	id: "utctf/2024/forensics/study-music.md";
+  slug: "utctf/2024/forensics/study-music";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"utctf/2024/misc/ccv.md": {
+	id: "utctf/2024/misc/ccv.md";
+  slug: "utctf/2024/misc/ccv";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
 "utctf/2024/misc/survey.md": {
 	id: "utctf/2024/misc/survey.md";
   slug: "utctf/2024/misc/survey";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"utctf/2024/reverse-engineering/beginner:-basic-reversing-problem.md": {
+	id: "utctf/2024/reverse-engineering/beginner:-basic-reversing-problem.md";
+  slug: "utctf/2024/reverse-engineering/beginner-basic-reversing-problem";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"utctf/2024/web/beginner:-off-brand-cookie-clicker.md": {
+	id: "utctf/2024/web/beginner:-off-brand-cookie-clicker.md";
+  slug: "utctf/2024/web/beginner-off-brand-cookie-clicker";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"utctf/2024/web/easy-mergers-v0.1.md": {
+	id: "utctf/2024/web/easy-mergers-v0.1.md";
+  slug: "utctf/2024/web/easy-mergers-v01";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"utctf/2024/web/schrödinger.md": {
+	id: "utctf/2024/web/schrödinger.md";
+  slug: "utctf/2024/web/schrödinger";
   body: string;
   collection: "writeups";
   data: InferEntrySchema<"writeups">

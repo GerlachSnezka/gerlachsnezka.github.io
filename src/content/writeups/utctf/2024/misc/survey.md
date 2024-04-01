@@ -1,9 +1,9 @@
 ---
-title: Survey
-description: https://forms.gle/VaB186QBnViSNdCt8
-date: 04/01/2024
+title: "Survey"
+description: "task"
 points: 100
 solves: 272
+author: nobody
 ---
 
-yeh' survey
+yeh' Survey.... it was hard lol

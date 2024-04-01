@@ -4,16 +4,18 @@ description: Online, jeopardy-style CTF.
 dateStart: 03/29/2024
 dateEnd: 03/31/2024
 categories:
+  - name: binary-exploitation
+    description: Exploit vulnerabilities in program code ("pwn").
   - name: cryptography
-    description: funny
+    description: Crack codes, decipher hidden messages, and understand encryption methods.
   - name: forensics
-    description: foren
+    description: Analyze digital evidence to uncover hidden information.
   - name: misc
-    description: MISC
-  - name: rev
-    description: reverse eng
+    description: Tackle challenges that don't fit neatly into other categories, often requiring creative thinking.
+  - name: reverse-engineering
+    description: Understand how software works by analyzing its code.
   - name: web
-    description: webos
+    description: Find vulnerabilities in websites and web applications.
 ---
 
 Online, jeopardy-style CTF. Free to play, with prizes offered first, second, and third place.
