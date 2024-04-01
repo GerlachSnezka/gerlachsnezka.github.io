@@ -1,0 +1,87 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import ArrowCard from "@components/ArrowCard.astro";
+import { CTFS } from "@consts";
+import { parseWriteUp } from "@lib/writeup";
+
+const data = (
+  await Promise.all(
+    (await getCollection("writeups")).map((writeup) => parseWriteUp(writeup)),
+  )
+)
+  .sort(
+    (a, b) => b.ctf.data.dateStart.valueOf() - a.ctf.data.dateStart.valueOf(),
+  )
+  .sort((a, b) => b.data.points - a.data.points);
+
+type Acc = {
+  [year: string]: {
+    [name: string]: CollectionEntry<"writeups">[];
+  };
+};
+
+const writeups = data.reduce((acc: Acc, writeup) => {
+  const year = writeup.ctf.data.dateStart.getFullYear().toString();
+  const ctf = writeup.ctf.data.title.toLowerCase();
+  if (!acc[year]) {
+    acc[year] = {};
+  }
+
+  if (!acc[year][ctf]) {
+    acc[year][ctf] = [];
+  }
+
+  acc[year][ctf].push(writeup);
+
+  return acc;
+}, {});
+
+const years = Object.keys(writeups).sort((a, b) => parseInt(b) - parseInt(a));
+---
+
+<PageLayout title={CTFS.TITLE} description={CTFS.DESCRIPTION}>
+  <Container>
+    <div class="space-y-10">
+      <div class="animate font-semibold text-black dark:text-white text-2xl">
+        Writeups
+      </div>
+      <div class="space-y-4">
+        {
+          years.map((year) => {
+            const ctfs = writeups[year];
+
+            return (
+              <section class="animate space-y-4">
+                <div class="font-semibold text-black dark:text-white text-xl">
+                  {year}
+                </div>
+                <div class="space-y-4">
+                  {Object.keys(ctfs).map((ctf) => {
+                    const writeups = ctfs[ctf];
+
+                    return (
+                      <section class="animate space-y-4">
+                        <div class="font-semibold text-black dark:text-white">
+                          {ctf}
+                        </div>
+                        <ul class="flex flex-col gap-4">
+                          {writeups.map((writeup) => (
+                            <li>
+                              <ArrowCard entry={writeup} />
+                            </li>
+                          ))}
+                        </ul>
+                      </section>
+                    );
+                  })}
+                </div>
+              </section>
+            );
+          })
+        }
+      </div>
+    </div>
+  </Container>
+</PageLayout>

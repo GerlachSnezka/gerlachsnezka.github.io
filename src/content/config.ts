@@ -15,6 +15,7 @@ const writeups = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    date: z.coerce.date(),
     points: z.number(),
     solves: z.number().default(0),
   }),

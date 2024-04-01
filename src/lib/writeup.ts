@@ -1,6 +1,6 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 
-type WriteUp = CollectionEntry<"writeups"> & {
+export type WriteUp = CollectionEntry<"writeups"> & {
   ctf: CollectionEntry<"ctfs">;
   category: string;
 };
