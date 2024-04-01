@@ -10,7 +10,7 @@ on:
 
 # Allow this job to clone the repo and create a page deployment
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -22,10 +22,21 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: "recursive"
+
       - name: Make writeups
         run: |
           rm -rf src/content/writeups/*
           ./make.sh
+
+      - name: Try to push changes
+        uses: actions-js/push@master
+        continue-on-error: true
+        with:
+          github_token: "${{ secrets.GITHUB_TOKEN }}"
+          author_email: 41898282+github-actions[bot]@users.noreply.github.com
+          author_name: github-actions[bot]
+          message: Update writeups 🚀
+
       - name: Install, build, and upload your site
         uses: withastro/action@v2
         with:
