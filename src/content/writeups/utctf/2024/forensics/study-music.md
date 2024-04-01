@@ -28,4 +28,4 @@ Finally, we used an online Morse code decoder to translate the Morse code, which
 
 ![Flag](https://media.discordapp.net/attachments/975453880991248394/1224388413491253349/ohM6hip.png?ex=661d4f91&is=660ada91&hm=a11b63ab645c7676c8f1f58f56e7c993009661333ca4be357937f14bc9fd39f5&=&format=webp&quality=lossless)
 
-**Flag:** ```UTFLAGL0V3TH4TDANC3```
+**Flag: UTFLAGL0V3TH4TDANC3**
