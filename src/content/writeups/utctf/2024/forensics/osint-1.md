@@ -1,6 +1,6 @@
 ---
 title: "OSINT 1"
-description: "task"
+description: "It seems like companies have document leaks all the time nowadays. I wonder if this company has any."
 points: 580
 solves: 202
 author: HenyPotter
