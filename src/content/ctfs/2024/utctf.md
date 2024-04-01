@@ -23,6 +23,7 @@ Open to all! Problems will span difficulties ranging from beginner-friendly to c
 Run by Information & Systems Security Society team at The University of Texas at Austin.
 
 More information:
+
 - List of sponsors: https://www.isss.io/
 - ISSS (organization): https://www.isss.io/
 

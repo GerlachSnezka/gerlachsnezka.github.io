@@ -9,15 +9,20 @@ import ArrowCard from "@components/ArrowCard.astro";
 import { parseWriteUp } from "@lib/writeup";
 
 export async function getStaticPaths() {
-  const ctfs = (await getCollection("ctfs"))
-    .sort((a, b) => b.data.dateStart.valueOf() - a.data.dateStart.valueOf());
+  const ctfs = (await getCollection("ctfs")).sort(
+    (a, b) => b.data.dateStart.valueOf() - a.data.dateStart.valueOf(),
+  );
 
   const paths = [];
 
   for (const ctf of ctfs) {
     for (const category of ctf.data.categories) {
       paths.push({
-        params: { year: ctf.data.dateStart.getFullYear(), name: ctf.data.title.toLowerCase(), category: category.name },
+        params: {
+          year: ctf.data.dateStart.getFullYear(),
+          name: ctf.data.title.toLowerCase(),
+          category: category.name,
+        },
         props: { ctf, category },
       });
     }
@@ -26,16 +31,23 @@ export async function getStaticPaths() {
   return paths;
 }
 type Props = {
-  ctf: CollectionEntry<"ctfs">,
-  category: CollectionEntry<"ctfs">["data"]["categories"][0],
+  ctf: CollectionEntry<"ctfs">;
+  category: CollectionEntry<"ctfs">["data"]["categories"][0];
 };
 
 const { ctf, category } = Astro.props;
 const { Content } = await ctf.render();
 
-const writeups = (await Promise.all((await getCollection("writeups"))
-  .map(writeup => parseWriteUp(writeup))))
-  .filter(writeup => writeup.ctf.data.title === ctf.data.title && writeup.category === category.name)
+const writeups = (
+  await Promise.all(
+    (await getCollection("writeups")).map((writeup) => parseWriteUp(writeup)),
+  )
+)
+  .filter(
+    (writeup) =>
+      writeup.ctf.data.title === ctf.data.title &&
+      writeup.category === category.name,
+  )
   .sort((a, b) => b.data.points - a.data.points);
 ---
 
@@ -60,37 +72,42 @@ const writeups = (await Promise.all((await getCollection("writeups"))
         {ctf.data.title} - {capitalize(category.name)}
       </div>
     </div>
-    
+
     <article class="animate">
       <Content />
     </article>
 
-    {writeups.length > 0 ? <section class="animate space-y-6">
-      <div class="flex flex-wrap gap-y-2 items-center justify-between">
-        <h5 class="font-semibold text-black dark:text-white">
-          Writeups
-        </h5>
-      </div>
-      <ul class="flex flex-col gap-4">
-        {writeups.map(writeup => (
-          <li>
-            <ArrowCard entry={{
-              ...writeup,
-              data: {
-                ...writeup.data,
-                title: `${writeup.data.title} (${writeup.ctf.data.title})`,
-              }
-            }} />
-          </li>
-        ))}
-      </ul>
-    </section>
-    : <section class="animate space-y-6">
-      <div class="flex flex-wrap gap-y-2 items-center justify-between">
-        <h5 class="font-semibold text-black dark:text-white">
-          No writeups written
-        </h5>
-      </div>
-    </section>}
+    {
+      writeups.length > 0 ? (
+        <section class="animate space-y-6">
+          <div class="flex flex-wrap gap-y-2 items-center justify-between">
+            <h5 class="font-semibold text-black dark:text-white">Writeups</h5>
+          </div>
+          <ul class="flex flex-col gap-4">
+            {writeups.map((writeup) => (
+              <li>
+                <ArrowCard
+                  entry={{
+                    ...writeup,
+                    data: {
+                      ...writeup.data,
+                      title: `${writeup.data.title} (${writeup.ctf.data.title})`,
+                    },
+                  }}
+                />
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : (
+        <section class="animate space-y-6">
+          <div class="flex flex-wrap gap-y-2 items-center justify-between">
+            <h5 class="font-semibold text-black dark:text-white">
+              No writeups written
+            </h5>
+          </div>
+        </section>
+      )
+    }
   </Container>
 </PageLayout>

@@ -8,10 +8,14 @@ import BackToPrev from "@components/BackToPrev.astro";
 import ArrowCard from "@components/ArrowCard.astro";
 
 export async function getStaticPaths() {
-  const ctfs = (await getCollection("ctfs"))
-    .sort((a, b) => b.data.dateStart.valueOf() - a.data.dateStart.valueOf());
+  const ctfs = (await getCollection("ctfs")).sort(
+    (a, b) => b.data.dateStart.valueOf() - a.data.dateStart.valueOf(),
+  );
   return ctfs.map((ctf) => ({
-    params: { year: ctf.data.dateStart.getFullYear(), name: ctf.data.title.toLowerCase() },
+    params: {
+      year: ctf.data.dateStart.getFullYear(),
+      name: ctf.data.title.toLowerCase(),
+    },
     props: ctf,
   }));
 }
@@ -24,9 +28,7 @@ const { Content } = await ctf.render();
 <PageLayout title={ctf.data.title} description={ctf.data.description}>
   <Container>
     <div class="animate">
-      <BackToPrev href="/ctfs">
-        Back to CTFs
-      </BackToPrev>
+      <BackToPrev href="/ctfs"> Back to CTFs </BackToPrev>
     </div>
     <div class="space-y-1 my-10">
       <div class="animate flex items-center gap-1.5">
@@ -42,30 +44,32 @@ const { Content } = await ctf.render();
         {ctf.data.title}
       </div>
     </div>
-    
+
     <article class="animate">
       <Content />
     </article>
 
     <section class="animate space-y-6">
       <div class="flex flex-wrap gap-y-2 items-center justify-between">
-        <h5 class="font-semibold text-black dark:text-white">
-          Categories
-        </h5>
+        <h5 class="font-semibold text-black dark:text-white">Categories</h5>
       </div>
       <ul class="flex flex-col gap-4">
-        {ctf.data.categories.map(category => (
-          <li>
-            <ArrowCard entry={{
-              data: {
-                title: capitalize(category.name),
-                description: category.description,
-              },
-              collection: ctf.collection,
-              slug: `${ctf.slug}/category/${category.name}`
-            }} />
-          </li>
-        ))}
+        {
+          ctf.data.categories.map((category) => (
+            <li>
+              <ArrowCard
+                entry={{
+                  data: {
+                    title: capitalize(category.name),
+                    description: category.description,
+                  },
+                  collection: ctf.collection,
+                  slug: `${ctf.slug}/category/${category.name}`,
+                }}
+              />
+            </li>
+          ))
+        }
       </ul>
     </section>
   </Container>

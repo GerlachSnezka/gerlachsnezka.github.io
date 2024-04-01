@@ -7,51 +7,53 @@ import Link from "@components/Link.astro";
 import { SITE, HOME, SOCIALS } from "@consts";
 import { parseWriteUp } from "@lib/writeup";
 
-const writeups = (await Promise.all((await getCollection("writeups"))
-  .map(writeup => parseWriteUp(writeup))))
-  .sort((a, b) => b.ctf.data.dateStart.valueOf() - a.ctf.data.dateStart.valueOf())
+const writeups = (
+  await Promise.all(
+    (await getCollection("writeups")).map((writeup) => parseWriteUp(writeup)),
+  )
+)
+  .sort(
+    (a, b) => b.ctf.data.dateStart.valueOf() - a.ctf.data.dateStart.valueOf(),
+  )
   .sort((a, b) => b.data.points - a.data.points)
-  .slice(0,SITE.NUM_WRITEUPS_ON_HOMEPAGE);
+  .slice(0, SITE.NUM_WRITEUPS_ON_HOMEPAGE);
 
 const ctfs = (await getCollection("ctfs"))
   .sort((a, b) => b.data.dateStart.valueOf() - a.data.dateStart.valueOf())
-  .slice(0,SITE.NUM_CTFS_ON_HOMEPAGE);
-
+  .slice(0, SITE.NUM_CTFS_ON_HOMEPAGE);
 ---
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
     <h4 class="animate font-semibold text-black dark:text-white">
-      Hi <span class="text-xl">👋</span> 
+      Hi <span class="text-xl">👋</span>
     </h4>
     <div class="space-y-16">
       <section>
         <article class="space-y-4">
           <p class="animate">
             We're a group of CTF enthusiasts from Slovakia and Czechia who enjoy
-            the challenge of solving security problems. We're always looking for new
-            ways to improve our skills and knowledge. Here, you can find our write-
-            ups and solutions to some of the CTFs and their challenges! Passion and
-            joy drive us, not profit.
+            the challenge of solving security problems. We're always looking for
+            new ways to improve our skills and knowledge. Here, you can find our
+            write- ups and solutions to some of the CTFs and their challenges!
+            Passion and joy drive us, not profit.
           </p>
         </article>
       </section>
 
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
-            Latest CTFs
-          </h5>
-          <Link href="/ctfs">
-            See all ctfs
-          </Link>
+          <h5 class="font-semibold text-black dark:text-white">Latest CTFs</h5>
+          <Link href="/ctfs"> See all ctfs </Link>
         </div>
         <ul class="flex flex-col gap-4">
-          {ctfs.map(ctf => (
-            <li>
-              <ArrowCard entry={ctf} />
-            </li>
-          ))}
+          {
+            ctfs.map((ctf) => (
+              <li>
+                <ArrowCard entry={ctf} />
+              </li>
+            ))
+          }
         </ul>
       </section>
 
@@ -60,44 +62,51 @@ const ctfs = (await getCollection("ctfs"))
           <h5 class="font-semibold text-black dark:text-white">
             Latest writeups
           </h5>
-          <Link href="/blog">
-            See all writeups
-          </Link>
+          <Link href="/blog"> See all writeups </Link>
         </div>
         <ul class="flex flex-col gap-4">
-          {writeups.map(writeup => (
-            <li>
-              <ArrowCard entry={{
-                ...writeup,
-                data: {
-                  ...writeup.data,
-                  title: `${writeup.data.title} (${writeup.ctf.data.title})`,
-                }
-              }} />
-            </li>
-          ))}
+          {
+            writeups.map((writeup) => (
+              <li>
+                <ArrowCard
+                  entry={{
+                    ...writeup,
+                    data: {
+                      ...writeup.data,
+                      title: `${writeup.data.title} (${writeup.ctf.data.title})`,
+                    },
+                  }}
+                />
+              </li>
+            ))
+          }
         </ul>
       </section>
 
       <section class="animate space-y-4">
-        <h5 class="font-semibold text-black dark:text-white">
-          Links
-        </h5>
+        <h5 class="font-semibold text-black dark:text-white">Links</h5>
         <article>
           <p>
-            If you're only interested in the challenge codes, check out our GitHub.
-            And if you're curious about our points, take a look at CTFtime.
+            If you're only interested in the challenge codes, check out our
+            GitHub. And if you're curious about our points, take a look at
+            CTFtime.
           </p>
         </article>
         <ul class="flex flex-wrap gap-2">
-          {SOCIALS.map(SOCIAL => (
-            <li class="flex gap-x-2 text-nowrap">
-              <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}>
-                {SOCIAL.NAME}
-              </Link>
-              {SOCIAL.NAME == SOCIALS.at(-1)?.NAME ? "" : "/"}
-            </li>
-          ))}
+          {
+            SOCIALS.map((SOCIAL) => (
+              <li class="flex gap-x-2 text-nowrap">
+                <Link
+                  href={SOCIAL.HREF}
+                  external
+                  aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}
+                >
+                  {SOCIAL.NAME}
+                </Link>
+                {SOCIAL.NAME == SOCIALS.at(-1)?.NAME ? "" : "/"}
+              </li>
+            ))
+          }
         </ul>
       </section>
     </div>

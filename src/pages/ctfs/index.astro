@@ -5,50 +5,47 @@ import Container from "@components/Container.astro";
 import ArrowCard from "@components/ArrowCard.astro";
 import { CTFS } from "@consts";
 
-const data = (await getCollection("ctfs"))
-  .sort((a, b) => b.data.dateStart.valueOf() - a.data.dateStart.valueOf());
-  
+const data = (await getCollection("ctfs")).sort(
+  (a, b) => b.data.dateStart.valueOf() - a.data.dateStart.valueOf(),
+);
+
 type Acc = {
   [year: string]: CollectionEntry<"ctfs">[];
-}
+};
 
 const ctfs = data.reduce((acc: Acc, ctf) => {
-    const year = ctf.data.dateStart.getFullYear().toString();
-    if (!acc[year]) {
-      acc[year] = [];
-    }
-    acc[year].push(ctf);
-    return acc;
-  }, {});
+  const year = ctf.data.dateStart.getFullYear().toString();
+  if (!acc[year]) {
+    acc[year] = [];
+  }
+  acc[year].push(ctf);
+  return acc;
+}, {});
 
-const years = Object.keys(ctfs).sort((a, b) => parseInt(b) - parseInt(a)); 
+const years = Object.keys(ctfs).sort((a, b) => parseInt(b) - parseInt(a));
 ---
 
 <PageLayout title={CTFS.TITLE} description={CTFS.DESCRIPTION}>
   <Container>
     <div class="space-y-10">
-      <div class="animate font-semibold text-black dark:text-white">
-        CTFs
-      </div>
+      <div class="animate font-semibold text-black dark:text-white">CTFs</div>
       <div class="space-y-4">
-        {years.map(year => (
-          <section class="animate space-y-4">
-            <div class="font-semibold text-black dark:text-white">
-              {year}
-            </div>
-            <div>
-              <ul class="flex flex-col gap-4">
-                {
-                  ctfs[year].map((ctf) => (
+        {
+          years.map((year) => (
+            <section class="animate space-y-4">
+              <div class="font-semibold text-black dark:text-white">{year}</div>
+              <div>
+                <ul class="flex flex-col gap-4">
+                  {ctfs[year].map((ctf) => (
                     <li>
-                      <ArrowCard entry={ctf}/>
+                      <ArrowCard entry={ctf} />
                     </li>
-                  ))
-                }
-              </ul>
-            </div>
-          </section>
-        ))}
+                  ))}
+                </ul>
+              </div>
+            </section>
+          ))
+        }
       </div>
     </div>
   </Container>

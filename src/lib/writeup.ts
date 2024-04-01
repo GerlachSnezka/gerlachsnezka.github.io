@@ -6,14 +6,14 @@ type WriteUp = CollectionEntry<"writeups"> & {
 };
 
 export async function parseWriteUp(
-  entry: CollectionEntry<"writeups">
+  entry: CollectionEntry<"writeups">,
 ): Promise<WriteUp> {
   const [ctfName, year, category] = entry.slug.split("/");
 
   const ctf = (await getCollection("ctfs")).find(
     (ctf) =>
       ctf.data.title.toLowerCase() === ctfName &&
-      ctf.data.dateStart.getFullYear() === Number(year)
+      ctf.data.dateStart.getFullYear() === Number(year),
   );
 
   if (!ctf) {
