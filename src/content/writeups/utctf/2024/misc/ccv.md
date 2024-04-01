@@ -7,7 +7,7 @@ date: April 1 2024
 author: Jozef Steinhübl
 ---
 
-![ccv](https://raw.githubusercontent.com/GerlachSnezka/utctf/main/assets/2024-misc-ccv)
+![ccv](https://raw.githubusercontent.com/GerlachSnezka/utctf/main/assets/2024-misc-ccv.png)
 
 After connecting via netcat we got more information:
 ```
