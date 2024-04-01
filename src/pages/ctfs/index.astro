@@ -6,7 +6,6 @@ import ArrowCard from "@components/ArrowCard.astro";
 import { CTFS } from "@consts";
 
 const data = (await getCollection("ctfs"))
-  .filter(ctf => !ctf.data.draft)
   .sort((a, b) => b.data.dateStart.valueOf() - a.data.dateStart.valueOf());
   
 type Acc = {
