@@ -1,0 +1,1 @@
+Uses [astro nano template](https://github.com/markhorn-dev/astro-nano)
