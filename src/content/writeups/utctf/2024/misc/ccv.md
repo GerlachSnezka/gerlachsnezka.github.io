@@ -7,6 +7,8 @@ date: April 1 2024
 author: Jozef Steinhübl
 ---
 
+![ccv](https://raw.githubusercontent.com/GerlachSnezka/utctf/main/assets/2024-misc-ccv)
+
 After connecting via netcat we got more information:
 ```
 I'll provide you a PAN, date as MMYY, CSC, and a CVV.
@@ -16,9 +18,9 @@ I'm counting on you. And be sure to keep track of your answers so we don't need 
 
 Each entry is in the format `PAN: X, date: X, code: X, cvv: X` for example `PAN: 7894591937750079490, date: 1241, code: 572, cvv: 231`
 
-On [wikipedia](https://en.wikipedia.org/wiki/Payment_card_number) we learn that PAN can be controlled using [Luhn algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm)
+On wikipedia we learn that [PAN](https://en.wikipedia.org/wiki/Payment_card_number) can be checked using [Luhn algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm)
 
-However, this is not enough for us. We have some key `dae55498c432545826fb153885bcb06b` in the input. At first, I did not understand why and only verified PAN, and date (no need to check the date after all) but did not address CSC and CVV at all. I started searching and came across [this article on LinkedIn](https://www.linkedin.com/pulse/card-verification-code-cvc-value-cvv-nayoon-cooray/) which describes CVV calculation. I implemented it and it worked exactly as it should.
+However, this is not enough for us. We have some key `dae55498c432545826fb153885bcb06b` in the description. At first, I did not understand why and only verified PAN, and date (no need to check the date after all) but did not address CSC and CVV at all. I started searching and came across [this article on LinkedIn](https://www.linkedin.com/pulse/card-verification-code-cvc-value-cvv-nayoon-cooray/) which describes CVV calculation. I implemented it and it worked exactly as it should.
 
 > To calculate the **CVV**, we need to:
 > 1. **Concatenate**: Join the PAN, expiry date, and service code together and add zeros to the end until it forms a 16-byte (32 character) string.
