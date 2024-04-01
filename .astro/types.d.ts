@@ -136,62 +136,6 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
-"01-getting-started/index.md": {
-	id: "01-getting-started/index.md";
-  slug: "01-getting-started";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"02-blog-collection/index.md": {
-	id: "02-blog-collection/index.md";
-  slug: "02-blog-collection";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"03-projects-collection/index.md": {
-	id: "03-projects-collection/index.md";
-  slug: "03-projects-collection";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"04-work-collection/index.md": {
-	id: "04-work-collection/index.md";
-  slug: "04-work-collection";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"05-markdown-syntax/index.md": {
-	id: "05-markdown-syntax/index.md";
-  slug: "05-markdown-syntax";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"06-mdx-syntax/index.mdx": {
-	id: "06-mdx-syntax/index.mdx";
-  slug: "06-mdx-syntax";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".mdx"] };
-"07-year-sorting-example/index.md": {
-	id: "07-year-sorting-example/index.md";
-  slug: "07-year-sorting-example";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"08-draft-example/index.md": {
-	id: "08-draft-example/index.md";
-  slug: "08-draft-example";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
 };
 "ctfs": {
 "2024/utctf.md": {
@@ -203,20 +147,6 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "projects": {
-"project-1/index.md": {
-	id: "project-1/index.md";
-  slug: "project-1";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-"project-2/index.md": {
-	id: "project-2/index.md";
-  slug: "project-2";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
 };
 "writeups": {
 "utctf/2024/cryptography/beginner:-anti-dcode.fr.md": {
