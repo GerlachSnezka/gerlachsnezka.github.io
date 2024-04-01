@@ -3,6 +3,7 @@ title: "Easy Mergers v0.1"
 description: "Tired of getting your corporate mergers blocked by the FTC"
 points: 787
 solves: 143
+date: April 1 2024
 author: Jozef Steinhübl 
 ---
 
