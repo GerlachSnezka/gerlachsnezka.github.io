@@ -1,12 +1,17 @@
 ---
 title: "Study Music"
-description: "task"
+description: "A challenge where participants analyze a YouTube video featuring a cat dancing to music playing only in the left channel, looping for 10 hours. The goal is to extract a hidden Morse code from the audio and decode it to find the flag."
 points: 834
 solves: 122
 author: HenyPotter
 ---
 
-We began with a YouTube video featuring a cat dancing to music playing only in the left channel, looping for an outstanding 10 hours. Our initial attempts to find clues in the video's description, subtitles, and the uploader's profile provided no results.
+# Introduction
+We got a YouTube video featuring a cat dancing to music playing only in the left channel, looping for an outstanding 10 hours.
+
+# Solution
+
+Our initial attempts to find clues in the video's description, subtitles, and the uploader's profile provided no results.
 
 We turned to [youtube-dl-gui](https://github.com/MrS0m30n3/youtube-dl-gui) to extract the audio from the video. Upon analyzing the audio in Audacity, we stumbled upon an unusual occurrence at the 3-hour, 14-minute, and 5-second mark.
 
@@ -28,4 +33,4 @@ Finally, we used an online Morse code decoder to translate the Morse code, which
 
 ![Flag](https://media.discordapp.net/attachments/975453880991248394/1224388413491253349/ohM6hip.png?ex=661d4f91&is=660ada91&hm=a11b63ab645c7676c8f1f58f56e7c993009661333ca4be357937f14bc9fd39f5&=&format=webp&quality=lossless)
 
-**Flag: UTFLAGL0V3TH4TDANC3**
+**Flag:**  ```UTFLAGL0V3TH4TDANC3```
