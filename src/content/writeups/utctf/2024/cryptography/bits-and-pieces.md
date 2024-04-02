@@ -11,9 +11,9 @@ author: Jozef Steinhübl
 
 This task is extremely similar to the [rsa-256](https://gerlachsnezka.github.io/writeups/utctf/2024/cryptography/rsa-256/) task, but with a multiple values of `N`, `e`, and `c` in a file `vals.txt`.
 
-> **Explanatory notes**
-> (N, e) is the public key
-> c is the ciphertext
+> **Explanatory notes**  
+> (N, e) is the public key  
+> c is the ciphertext  
 
 ## Solving
 
