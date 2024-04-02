@@ -9,6 +9,8 @@ author: Jozef Steinhübl
 
 ## Introduction
 
+![task](https://raw.githubusercontent.com/GerlachSnezka/utctf/main/assets/2024-crypto-bitsandpieces-task.png)
+
 This task is extremely similar to the [rsa-256](https://gerlachsnezka.github.io/writeups/utctf/2024/cryptography/rsa-256/) task, but with a multiple values of `N`, `e`, and `c` in a file `vals.txt`.
 
 > **Explanatory notes**  
