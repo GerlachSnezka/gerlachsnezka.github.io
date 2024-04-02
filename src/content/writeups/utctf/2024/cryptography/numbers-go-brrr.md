@@ -50,7 +50,7 @@ print("Here is the encrypted flag:", encrypt(flag.encode()))
 
 This encryption service provides the encrypted flag if we type `1` and encrypts a message if we type `2`. Encryption is done using AES in ECB mode with a random key generated from a seed.
 
-## Solving
+## Solving
 
 We can easily solve this task by brute-forcing the seed and decrypting the flag. We can do this by connecting to the service and getting the encrypted flag. We can then bruteforce the seed and decrypt the flag. Since the seed is generated randomly from 0 to 10^6, we can brute force it in a reasonable time.
 
