@@ -18,7 +18,7 @@ In this challenge, we got a link to a discord bot that we can use to invite it t
 
 ## Investigation
 
-After reading the challenge description again, there's a very important keyword *sharing activity*. This probably means that the app is not a bot, but a [discord activity](https://discord.com/developers/docs/activities/overview) instead. It's a new concept that has been released recently, and it allows developers to create custom voice activities. Don't be fooled by the URL.
+After reading the challenge description again, there's a very important keyword **sharing activity**. This probably means that the app is not a bot, but a [discord activity](https://discord.com/developers/docs/activities/overview) instead. It's a new concept that has been released recently, and it allows developers to create custom voice activities. Don't be fooled by the URL.
 
 ## Solution
 
