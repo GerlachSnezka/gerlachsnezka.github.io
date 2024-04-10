@@ -12,10 +12,10 @@ const writeups = (
     (await getCollection("writeups")).map((writeup) => parseWriteUp(writeup)),
   )
 )
+  .sort((a, b) => b.data.points - a.data.points)
   .sort(
     (a, b) => b.ctf.data.dateStart.valueOf() - a.ctf.data.dateStart.valueOf(),
   )
-  .sort((a, b) => b.data.points - a.data.points)
   .slice(0, SITE.NUM_WRITEUPS_ON_HOMEPAGE);
 
 const ctfs = (await getCollection("ctfs"))
