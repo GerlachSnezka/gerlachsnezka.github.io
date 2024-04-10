@@ -12,7 +12,7 @@ for ctf in $ctfs; do
 
     echo "Parsing $ctf"
 
-    years=$(find writeups/utctf/ -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | grep -E '[0-9]{4}' | xargs -I {} basename {})
+    years=$(find writeups/$ctf/ -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | grep -E '[0-9]{4}' | xargs -I {} basename {})
 
     for year in $years; do
       echo "Parsing $year for $ctf"
