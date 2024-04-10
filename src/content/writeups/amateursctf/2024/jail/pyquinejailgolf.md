@@ -1,8 +1,8 @@
 ---
 title: "pyquinejailgolf"
 description: "What about a quine?"
-points: 430
-solves: 19
+points: 419
+solves: 23
 author: nobody
 ---
 

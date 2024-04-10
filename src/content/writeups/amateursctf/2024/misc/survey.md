@@ -2,7 +2,7 @@
 title: "survey"
 description: "[survey](https://forms.gle/yhv7NoHnkzFPwJbm8)"
 points: 1
-solves: 174
+solves: 204
 author: nobody
 ---
 

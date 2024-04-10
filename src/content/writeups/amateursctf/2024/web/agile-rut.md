@@ -1,8 +1,8 @@
 ---
 title: "agile-rut"
 description: "check out this cool font i made!"
-points: 175
-solves: 305
+points: 173
+solves: 311
 author: nobody
 ---
 

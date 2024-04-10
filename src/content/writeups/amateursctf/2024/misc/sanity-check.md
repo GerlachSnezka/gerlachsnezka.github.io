@@ -1,8 +1,8 @@
 ---
 title: "sanity-check"
 description: "wow sanity check go join the discord."
-points: 57
-solves: 823
+points: 56
+solves: 830
 author: nobody
 ---
 

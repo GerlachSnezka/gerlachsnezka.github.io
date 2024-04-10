@@ -1,8 +1,8 @@
 ---
 title: "cherry-blossoms"
 description: "average southern californian reacts to DC weather. amazing scenery though at the time."
-points: 200
-solves: 245
+points: 195
+solves: 255
 author: nobody
 ---
 

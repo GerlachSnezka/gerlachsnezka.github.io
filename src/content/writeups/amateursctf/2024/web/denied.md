@@ -1,8 +1,8 @@
 ---
 title: "denied"
 description: "what options do i have?"
-points: 54
-solves: 849
+points: 53
+solves: 856
 author: nobody
 ---
 

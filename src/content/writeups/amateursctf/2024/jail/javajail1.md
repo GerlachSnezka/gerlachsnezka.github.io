@@ -1,8 +1,8 @@
 ---
 title: "javajail1"
 description: "Good luck getting anything to run."
-points: 314
-solves: 84
+points: 309
+solves: 88
 author: nobody
 ---
 
