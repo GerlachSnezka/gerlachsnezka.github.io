@@ -138,6 +138,13 @@ declare module 'astro:content' {
 		"blog": {
 };
 "ctfs": {
+"2024/amateursctf.md": {
+	id: "2024/amateursctf.md";
+  slug: "2024/amateursctf";
+  body: string;
+  collection: "ctfs";
+  data: InferEntrySchema<"ctfs">
+} & { render(): Render[".md"] };
 "2024/utctf.md": {
 	id: "2024/utctf.md";
   slug: "2024/utctf";
@@ -149,6 +156,111 @@ declare module 'astro:content' {
 "projects": {
 };
 "writeups": {
+"amateursctf/2024/algo/orz-larry.md": {
+	id: "amateursctf/2024/algo/orz-larry.md";
+  slug: "amateursctf/2024/algo/orz-larry";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"amateursctf/2024/crypto/aesy.md": {
+	id: "amateursctf/2024/crypto/aesy.md";
+  slug: "amateursctf/2024/crypto/aesy";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"amateursctf/2024/jail/javajail1.md": {
+	id: "amateursctf/2024/jail/javajail1.md";
+  slug: "amateursctf/2024/jail/javajail1";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"amateursctf/2024/jail/javajail2.md": {
+	id: "amateursctf/2024/jail/javajail2.md";
+  slug: "amateursctf/2024/jail/javajail2";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"amateursctf/2024/jail/pyquinejailgolf.md": {
+	id: "amateursctf/2024/jail/pyquinejailgolf.md";
+  slug: "amateursctf/2024/jail/pyquinejailgolf";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"amateursctf/2024/jail/sansomega.md": {
+	id: "amateursctf/2024/jail/sansomega.md";
+  slug: "amateursctf/2024/jail/sansomega";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"amateursctf/2024/misc/bears-flagcord.md": {
+	id: "amateursctf/2024/misc/bears-flagcord.md";
+  slug: "amateursctf/2024/misc/bears-flagcord";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"amateursctf/2024/misc/sanity-check.md": {
+	id: "amateursctf/2024/misc/sanity-check.md";
+  slug: "amateursctf/2024/misc/sanity-check";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"amateursctf/2024/misc/survey.md": {
+	id: "amateursctf/2024/misc/survey.md";
+  slug: "amateursctf/2024/misc/survey";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"amateursctf/2024/osint/bathroom-break.md": {
+	id: "amateursctf/2024/osint/bathroom-break.md";
+  slug: "amateursctf/2024/osint/bathroom-break";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"amateursctf/2024/osint/cherry-blossoms.md": {
+	id: "amateursctf/2024/osint/cherry-blossoms.md";
+  slug: "amateursctf/2024/osint/cherry-blossoms";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"amateursctf/2024/web/agile-rut.md": {
+	id: "amateursctf/2024/web/agile-rut.md";
+  slug: "amateursctf/2024/web/agile-rut";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"amateursctf/2024/web/denied.md": {
+	id: "amateursctf/2024/web/denied.md";
+  slug: "amateursctf/2024/web/denied";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"amateursctf/2024/web/one-shot.md": {
+	id: "amateursctf/2024/web/one-shot.md";
+  slug: "amateursctf/2024/web/one-shot";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
+"amateursctf/2024/web/sculpture.md": {
+	id: "amateursctf/2024/web/sculpture.md";
+  slug: "amateursctf/2024/web/sculpture";
+  body: string;
+  collection: "writeups";
+  data: InferEntrySchema<"writeups">
+} & { render(): Render[".md"] };
 "utctf/2024/cryptography/beginner:-anti-dcode.fr.md": {
 	id: "utctf/2024/cryptography/beginner:-anti-dcode.fr.md";
   slug: "utctf/2024/cryptography/beginner-anti-dcodefr";

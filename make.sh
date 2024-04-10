@@ -23,7 +23,7 @@ for ctf in $ctfs; do
 
       cp writeups/$ctf/$year/* src/content/writeups/$ctf/$year -r
       rm src/content/writeups/$ctf/$year/README.md
-      rm src/content/writeups/$ctf/$year/data.json
+      rm src/content/writeups/$ctf/$year/*.json
       rm src/content/writeups/$ctf/$year/**/README.md
     done
 done

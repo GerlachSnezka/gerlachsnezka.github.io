@@ -17,6 +17,7 @@ categories:
   - name: pwn
     description: Exploit vulnerabilities in program code ("pwn").
   - name: rev
+    description: Understand how software works by analyzing its code.
   - name: steg
     description: Analyze images, audio, and other files to uncover hidden information.
   - name: web
