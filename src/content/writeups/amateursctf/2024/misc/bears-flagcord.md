@@ -7,7 +7,8 @@ author: Jozef Steinhübl
 date: April 10 2024
 ---
 
-## Introduction
+
+## Introduction
 
 ![task](https://raw.githubusercontent.com/GerlachSnezka/amateursctf/main/assets/2024-misc-bears-flagcord.png)
 
@@ -15,11 +16,11 @@ In this challenge, we got a link to a discord bot that we can use to invite it t
 
 ![integration private](https://raw.githubusercontent.com/GerlachSnezka/amateursctf/main/assets/2024-misc-bears-flagcord-integration-private.png)
 
-## Investigation
+## Investigation
 
 After reading the challenge description again, there's a very important keyword *sharing activity*. This probably means that the app is not a bot, but a [discord activity](https://discord.com/developers/docs/activities/overview) instead. It's a new concept that has been released recently, and it allows developers to create custom voice activities. Don't be fooled by the URL.
 
-## Solution
+## Solution
 
 As a [discord dataminer](https://github.com/xhyrom/discord-datamining), my first idea was to fetch the application details using the api because I also missed the description of the challenge. I used the following command to get the application details:
 
