@@ -13,13 +13,11 @@ categories:
   - name: misc
     description: Tackle challenges that don't fit neatly into other categories, often requiring creative thinking.
   - name: osint
-    description: Analyze digital evidence to uncover hidden information.
+    description: Analyze images, audio, and other files to uncover hidden information.
   - name: pwn
     description: Exploit vulnerabilities in program code ("pwn").
   - name: rev
     description: Understand how software works by analyzing its code.
-  - name: steg
-    description: Analyze images, audio, and other files to uncover hidden information.
   - name: web
     description: Find vulnerabilities in websites and web applications.
 ---
