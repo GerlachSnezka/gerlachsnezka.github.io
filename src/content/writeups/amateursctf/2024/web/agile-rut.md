@@ -27,7 +27,7 @@ After inspecting using another service, called [GlyphrStudio](https://www.glyphr
 
 ![glyphrstudio ligatures](https://raw.githubusercontent.com/GerlachSnezka/amateursctf/main/assets/2024-web-agile-rut-glyphrstudio-ligatures.png)
 
-![glyphrstudio ligature](2024-web-agile-rut-glyphrstudio-ligature.png)
+![glyphrstudio ligature](https://raw.githubusercontent.com/GerlachSnezka/amateursctf/main/assets/2024-web-agile-rut-glyphrstudio-ligature.png)
 
 Using dev tools we can copy the ligature name and we'll get the flag:
 
