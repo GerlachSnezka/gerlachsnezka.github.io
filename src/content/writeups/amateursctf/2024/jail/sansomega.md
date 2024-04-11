@@ -40,5 +40,5 @@ $ /???/????32 *.???
 Woala! We got the flag!
 
 ```
-amateursCTF{pic0_w45n7_g00d_n0ugh_50_i_700k_som3_cr34t1v3_l1b3rt135_ade8820e}$
+amateursCTF{pic0_w45n7_g00d_n0ugh_50_i_700k_som3_cr34t1v3_l1b3rt135_ade8820e}
 ```
